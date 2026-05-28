@@ -16,9 +16,9 @@ services:
 
     volumes:
       - wordpress_data:/var/www/html
-      - ./wordpress/custom.ini:/usr/local/etc/php/conf.d/custom.ini
-      - ./wordpress/wp-config.php:/var/www/html/wp-config.php
-      - ./wordpress/uploads:/var/www/html/wp-content/uploads
+      - ./config/custom.ini:/usr/local/etc/php/conf.d/custom.ini
+      - ./config/wp-config.php:/var/www/html/wp-config.php
+      - ./config/uploads:/var/www/html/wp-content/uploads
 
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost"]
